@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:padding="16dp">
+
+    <!-- Language selectors -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <Spinner
+            android:id="@+id/spinnerSource"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <ImageButton
+            android:id="@+id/btnSwap"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginHorizontal="8dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="Swap languages"
+            android:src="@android:drawable/ic_menu_rotate" />
+
+        <Spinner
+            android:id="@+id/spinnerTarget"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:gravity="center"
+        android:text="Tap the mic to start"
+        android:textColor="#666666"
+        android:textSize="13sp" />
+
+    <!-- Original speech -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Heard:"
+        android:textStyle="bold"
+        android:textSize="13sp"
+        android:textColor="#888888" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="4dp"
+        android:background="@color/card_bg"
+        android:padding="12dp">
+
+        <TextView
+            android:id="@+id/tvOriginal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textColor="@color/black" />
+    </ScrollView>
+
+    <!-- Translated speech -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Translated:"
+        android:textStyle="bold"
+        android:textSize="13sp"
+        android:textColor="#888888" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="4dp"
+        android:background="@color/card_bg"
+        android:padding="12dp">
+
+        <TextView
+            android:id="@+id/tvTranslated"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/purple_700" />
+    </ScrollView>
+
+    <!-- Mic control -->
+    <ImageButton
+        android:id="@+id/btnMic"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:background="@android:drawable/btn_default"
+        android:backgroundTint="@color/mic_inactive"
+        android:contentDescription="Start listening"
+        android:padding="18dp"
+        android:src="@android:drawable/ic_btn_speak_now"
+        app:tint="@color/white" />
+
+</LinearLayout>

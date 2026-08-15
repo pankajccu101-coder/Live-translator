@@ -1,0 +1,10 @@
+<resources>
+    <color name="purple_500">#6650a4</color>
+    <color name="purple_700">#4F378B</color>
+    <color name="teal_200">#03DAC5</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#1B1B1F</color>
+    <color name="mic_active">#E53935</color>
+    <color name="mic_inactive">#6650a4</color>
+    <color name="card_bg">#F3EDF7</color>
+</resources>
